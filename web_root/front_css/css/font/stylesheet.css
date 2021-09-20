@@ -1,0 +1,8 @@
+﻿/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {
+font-family:"Sansation Bold";
+src:url("Sansation_Boldd41d.html?") format("eot"), url("Sansation_Bold.html") format("woff"), url("Sansation_Bold-2.html") format("truetype"), url("Sansation_Bold.svg#SansationBold") format("svg");
+font-weight:normal;
+font-style:normal;
+}
+/** Import Google Fonts **/
