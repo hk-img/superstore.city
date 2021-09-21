@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  <link rel="shortcut icon" href="<?php echo base_url(); ?>web_root/images/ayr-final.png">
+  <link rel="shortcut icon" href="<?php echo base_url(); ?>web_root/images/favicon.png">
   <title><?php if(isset($title)){ echo $title; }else{ echo 'AYR Group'; } ?></title>
 <link rel="stylesheet" type="text/css" href="<?php echo $root;?>web_root/front_css/css/bootstrap.css"/>
 <link rel="stylesheet" href="<?php echo $root;?>web_root/front_css/font-awesome-4.6.1/css/font-awesome.min.css">
@@ -12,18 +12,24 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $root;?>web_root/front_css/css/sb-admin.css"/>
 <script src="https://code.jquery.com/jquery-1.12.4.js" ></script> 
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
+
 </head>
 
 <body style="margin-bottom: 56px;padding-top: 56px;">
  
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>web_root/images/ayr-final.png" class="img-responsive" style="height: 40px;"></a>
+    <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>web_root/images/logo-tea.png" class="img-responsive" style="height: 40px;"></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="<?php echo base_url('profile'); ?>">
             <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">Dashboard</span>
@@ -69,7 +75,7 @@
         <li class="nav-item">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#epin" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-user-secret"></i>
-            <span class="nav-link-text">E-PIN WALLET</span>
+            <span class="nav-link-text">E-Pin Wallet</span>
           </a>
           <ul class="sidenav-second-level collapse" id="epin">
             <li>
@@ -121,7 +127,7 @@
             <span class="nav-link-text">Passbook</span>
           </a>
         </li>
-		<li class="nav-item">
+		<!--- <li class="nav-item user-imgs">
             <span class="nav-link">
 			<?php 
 				$userResult=$this->db->select('image,name')->where('member_id',$this->session->userdata('userlogin'))->get('str_member')->row_array();
@@ -140,7 +146,7 @@
             <p class="nav-link-text" style="margin: 10px 0 5px;"><?php echo ucfirst($userResult['name']); ?></p>
             <p class="nav-link-text"><?php echo $this->Form_model->getRankName($this->session->userdata('userlogin')); ?></p>
             </span>
-        </li>
+        </li> -->
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -149,7 +155,7 @@
           </a>
         </li>
       </ul>
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto new-users">
         <li class="nav-item">
           <a class="nav-link">
             <i class="fa fa-fw fa-user"></i>Username: <?php echo getNameByMemberId($this->session->userdata('userlogin')); ?></a>

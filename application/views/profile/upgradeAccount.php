@@ -31,8 +31,8 @@
 												<tr>
 													<td></td>
 													<td>
-													<button type="reset" class="btn btn-default" id="" name="upgrade" value="upgrade" style="margin-bottom:20px">Reset</button>
-													<button type="submit" class="btn btn-success" id="" name="upgrade" value="upgrade" style="margin-bottom:20px;">Submit</button>
+													<button type="reset" class="btn btn-default btn-custom" id="" name="upgrade" value="upgrade" style="margin-bottom:20px">Reset</button>
+													<button type="submit" class="btn btn-success btn-custom" id="" name="upgrade" value="upgrade" style="margin-bottom:20px;">Submit</button>
 													</td>
 													<td ></td>
 												</tr>

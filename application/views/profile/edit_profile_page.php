@@ -179,7 +179,7 @@
 			</div>
 		</div>
 	<div class="col-lg-12" style="clear: both;">
-		<input type="submit" value="Update Now"  id="submit_reg_bt" class="btn btn-success" />
+		<input type="submit" value="Update Now"  id="submit_reg_bt" class="btn btn-success btn-custom" />
 		<div> &nbsp; </div>
 	</div> 
 	</div>  

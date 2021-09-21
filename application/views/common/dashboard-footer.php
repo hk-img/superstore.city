@@ -5,7 +5,7 @@
   <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-          <small>Copyright ©AYR Group 2018</small>
+          <small>Copyright ©AYR Group <script>document.write(new Date().getFullYear())</script></small>
         </div>
       </div>
     </footer>
