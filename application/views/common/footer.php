@@ -4,9 +4,68 @@
 
 ?>
 
-</section>
+<footer class="site-footer style-1" id="footer">
+   <div class="footer-top">
+     <div class="container">
+       <div class="footer-info wow fadeIn" data-wow-duration="2s" data-wow-delay="0.8s">
+         <div class="row align-items-center">
+           <div class="col-xl-6 col-md-4">
+ 					<img src="<?php echo $root;?>web_root/images/logo-tea.png" alt="Logo" class="img-size img-responsive" />
+           </div>
+           <div class="col-xl-3 col-md-4 col-sm-6">
+             <div class="icon-bx-wraper left m-b10">
+               <div class="icon-lg"><a href="javascript:void(0);" class="icon-cell">
+			   <i class="fa fa-mobile" aria-hidden="true"></i>
+				</a>
+               </div>
+               <div class="icon-content icnew">
+                 <p>+91 987-654-3210<br>info@example.com</p>
+               </div>
+             </div>
+           </div>
+           <div class="col-xl-3 col-md-4 col-sm-6">
+             <div class="icon-bx-wraper left m-b10">
+               <div class="icon-lg"><a href="javascript:void(0);" class="icon-cell"><i class="fa fa-map-marker" aria-hidden="true"></i>
 
-</section>
+</a></div>
+               <div class="icon-content icnew">
+                 <p>Marmora Road Chi Minh City, Vietnam</p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-xl-6 col-lg-6 col-sm-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
+           <div class="widget widget_about">
+             <!-- <h5 class="footer-title">About Us</h5> -->
+             <p>Maecenas pellentesque placerat quam, in finibus nisl tincidunt sed. Aliquam magna augue, malesuada ut</p>
+
+           </div>
+         </div>
+         <div class="col-xl-6 col-lg-6 col-sm-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
+           <div class="widget widget_services">
+             <!-- <h5 class="footer-title">Our links</h5> -->
+             <ul>
+               <li><a href="javascript:void(0);">Home</a></li>
+               <li><a href="javascript:void(0);">Legal Documents</a></li>
+               <li><a href="javascript:void(0);">Contact Us</a></li>
+               <li><a href="javascript:void(0);">Login</a></li>
+               <li><a href="javascript:void(0);">Register</a></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="footer-bottom wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
+     <div class="container">
+       <div class="row">
+         <div class="col-sm-12 text-center"><span class="copyright-text">Copyright © 2021 teamoney. All rights reserved.</span></div>
+       </div>
+     </div>
+   </div>
+ </footer>
 
 <script src="<?php echo $root; ?>web_root/admin_root/js/vendor.js"></script>
 

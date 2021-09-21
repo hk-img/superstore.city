@@ -1,0 +1,138 @@
+.content-inner-2 {
+  padding: 50px 0;
+
+  .section-head {
+    margin-bottom: 25px;
+
+    .sub-title {
+      padding: 10px 30px;
+      display: inline-block;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      background-color: rgba(137, 110, 255, 0.1);
+      color: #896eff !important;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 600;
+      color: #1f2471;
+    }
+  }
+}
+
+.icon-bx-wraper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 35px;
+
+  .icon-bx-md {
+    @include flex();
+    position: relative;
+    margin: 20px;
+    min-width: 100px;
+    transition: all 0.5s;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 165px;
+      height: 165px;
+      left: calc(50% - 82px);
+      top: calc(50% - 82px);
+      background-size: contain;
+      z-index: -1;
+      background-repeat: no-repeat;
+    }
+    a {
+      font-size: 50px;
+      color: #fff;
+      z-index: 2;
+      position: relative;
+      i {
+        font-size: 45px;
+        vertical-align: middle;
+      }
+    }
+  }
+  .icon-content {
+    margin-left: 30px;
+    overflow: hidden;
+    h4 {
+      color: #1f2471;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  &:hover {
+    .icon-bx-md {
+      &::before {
+        animation: rotate 4s linear infinite;
+      }
+    }
+  }
+}
+.dlab-media {
+  overflow: hidden;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+    animation: move2 5s infinite;
+  }
+}
+.bef1::before {
+  background-image: url("../../images/wel-1.png");
+}
+.bef2::before {
+  background: url("../../images/wel-2.png");
+}
+.bef3::before {
+  background: url("../../images/wel-3.png");
+}
+.belf2 {
+  margin-left: 100px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes move2 {
+  0% {
+    -webkit-transform: rotate(1deg) translate(2px, 2px);
+    transform: rotate(1deg) translate(2px, 2px);
+  }
+  50% {
+    -webkit-transform: rotate(-1deg) translate(-2px, -2px);
+    transform: rotate(-1deg) translate(-2px, -2px);
+  }
+  to {
+    -webkit-transform: rotate(1deg) translate(2px, 2px);
+    transform: rotate(1deg) translate(2px, 2px);
+  }
+}
+@keyframes move2 {
+  0% {
+    -webkit-transform: rotate(1deg) translate(2px, 2px);
+    transform: rotate(1deg) translate(2px, 2px);
+  }
+  50% {
+    -webkit-transform: rotate(-1deg) translate(-2px, -2px);
+    transform: rotate(-1deg) translate(-2px, -2px);
+  }
+  to {
+    -webkit-transform: rotate(1deg) translate(2px, 2px);
+    transform: rotate(1deg) translate(2px, 2px);
+  }
+}

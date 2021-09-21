@@ -1,0 +1,20 @@
+$sec-main-heading: 3.6rem;
+$sec-inner-heading: 2.4rem;
+$sec-inner-text: 1.8rem;
+$color-white: #fff;
+$color-black: #000;
+$color-primary: #f55f8d;
+$color-primary-lg: #f55f8cc5;
+
+@mixin marginTop {
+  margin-top: 72px;
+}
+@mixin trans {
+  transition: all 0.35s linear;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

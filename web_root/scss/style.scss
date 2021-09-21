@@ -1,0 +1,16 @@
+// Genral
+@import "./resets", "./variable";
+
+// Homepage
+@import "./homepage/header", "./homepage/slider", "./homepage/welcome-sec",
+  "./homepage/mis-vis-sec", "./homepage/why-us", "./homepage/footer";
+
+// legal documents
+@import "./legal-doc";
+
+// login
+@import "./login";
+
+// contact us
+
+@import "./contact-us";

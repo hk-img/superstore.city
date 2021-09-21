@@ -46,7 +46,7 @@ $(document).ready( function() {
         </div><!-- End Item -->
  
          <div class="item">
-          <img src="<?php echo $root; ?>web_root/images/slider-2.png" class="img-responsive"> 
+          <img src="<?php echo $root; ?>web_root/images/slider-2.jpg" class="img-responsive"> 
 		  <!--
            <div class="carousel-caption">
             <h3>Headline</h3>
@@ -56,7 +56,7 @@ $(document).ready( function() {
         </div><!-- End Item -->
         
         <div class="item">
-          <img src="<?php echo $root; ?>web_root/images/slider-3.png" class="img-responsive">
+          <img src="<?php echo $root; ?>web_root/images/slider-3.jpg" class="img-responsive">
 		  <!--
            <div class="carousel-caption">
             <h3>Headline</h3>

@@ -1,0 +1,64 @@
+.login-container {
+  @include marginTop();
+  padding: 50px 0;
+  background: #f7f7f7;
+  .modalI {
+    @include flex();
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.box-shadow {
+  @include flex();
+  flex-direction: column;
+  padding: 30px 50px;
+  box-shadow: 0 0 18px #bbb8b85c;
+  background: #fff;
+  border-radius: 10px;
+}
+.input-group {
+  margin-bottom: 20px;
+}
+.input-group-prepend {
+  position: absolute;
+  left: 25px;
+  top: 22.5px;
+  z-index: 99;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: transparent;
+  border-right: 1px solid #1f2471;
+  margin-right: 10px;
+}
+.input-group-prepend .input-group-text {
+  justify-content: center;
+  padding: 0;
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+  background-color: transparent;
+}
+.input-group-prepend .input-group-text i {
+  color: #1f2471;
+  font-size: 18px;
+}
+.input-group-prepend + .form-control,
+.input-group-prepend + .form-control + .bootstrap-select,
+.input-group-prepend + .form-control + .custom-file-label {
+  padding: 10px 20px 10px 65px;
+}
+.form-control {
+  box-shadow: 0 0 10px 4px rgba(31, 66, 135, 0.1);
+  height: 45px;
+  border-radius: 3.5rem !important;
+  padding: 10px 20px;
+  position: relative;
+  font-size: 15px;
+}
+textarea {
+  height: 120px !important;
+  resize: none;
+}
+.read-more-btn {
+  margin-top: 15px;
+}
