@@ -90,7 +90,7 @@ $root = root();
     <!-- Logo -->
       <div class="logo" >
          <span class="logo-icon glyphicon glyphicon-th-large" toggle-off-canvas style="cursor:pointer;"></span>
-			<span class="logo-text">AYR Group</span>
+			<span class="logo-text">Tea Money</span>
         </a>
     </div>
     <!-- needs to be put after logo to make it work -->

@@ -31,7 +31,7 @@ $root = root();
 				</div>
 			</div>
 			<div class="col-lg-12 col-xs-12 form-group">
-				<input type="submit" style="float:right;"name="btnsave" value="Change Password"  id="submit_reg_bt" class="btn btn-success" />
+				<input type="submit" style="float:right;"name="btnsave" value="Change Password"  id="submit_reg_bt" class="btn btn-success btn-custom" />
 			</div>
 			<div>   
 				<input type="hidden" name="HfPageOpt" id="HfPageOpt" value="4" /> 

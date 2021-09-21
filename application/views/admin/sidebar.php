@@ -1,7 +1,7 @@
  
  
  <div class="main-container">
-	<aside id="nav-container" class="nav-container nav-vertical" style='background:linear-gradient(120deg,#0a7f84 25%,#6e4593 85%);'   data-ng-class="{'nav-fixed': main.fixedSidebar,'bg-light': ['31','32','33','34','35','36'].indexOf(main.skin) >= 0,'bg-dark': ['31','32','33','34','35','36'].indexOf(main.skin) < 0}">
+	<aside id="nav-container" class="nav-container nav-vertical" style='background:linear-gradient();'   data-ng-class="{'nav-fixed': main.fixedSidebar,'bg-light': ['31','32','33','34','35','36'].indexOf(main.skin) >= 0,'bg-dark': ['31','32','33','34','35','36'].indexOf(main.skin) < 0}">
 	   <div class="nav-wrapper">
 		<ul  id="nav" class="nav" data-slim-scroll data-accordion-nav data-highlight-active>
         <li><a href="<?php echo base_url('admin/Home'); ?>"><i class="fa fa-dashboard"><span class="icon-bg bg-danger"></span></i>

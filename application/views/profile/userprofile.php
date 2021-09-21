@@ -17,7 +17,7 @@
         <div class="row card-body">
 			   <div class="list-group list-group-flush small" style="width:100%;">
               <div class="table-responsive">
-				<table class="table">
+				<table class="table table-bordered">
 				  <tbody>
 					<tr>
 					  <td style="border-top: none;">Last Login</td>

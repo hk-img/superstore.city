@@ -1,4 +1,4 @@
-	<div class="col-lg-4 col-xs-12">
+	<div class="col-lg-4 col-xs-12" >
         <!-- Example Wallet Card-->
           <div class="card mb-3">
             <div class="card-header">
@@ -40,7 +40,7 @@
             <div class="card-header">
               <i class="fa fa-file-text-o"></i> Member News</div>
             <div class="card-body">
-				<marquee onmouseover="stop();" onmouseout="start();" scrollamount="3" direction="up" style="padding:12px;height:190px;">
+				<marquee onmouseover="stop();" onmouseout="start();" scrollamount="3" direction="up" >
 					<?php 
 						$news=$this->db->get('news')->result();
 						 

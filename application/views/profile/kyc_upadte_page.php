@@ -62,7 +62,7 @@
             </div>
 			<div class="form-group col-sm-12">
               <div class="register">
-                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="submit" class="btn btn-success btn-custom">Submit</button>
               </div>
             </div>		
      <?php echo form_close(); ?>
