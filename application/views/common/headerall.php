@@ -9,7 +9,7 @@ $root = root();
  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  	<meta charset="utf-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
- 	<link rel="shortcut icon" href="<?php echo $root;?>web_root/images/ayr-fav.png">
+ 	<link rel="shortcut icon" href="<?php echo base_url(); ?>web_root/images/favicon.png">
  	<link rel="stylesheet" type="text/css" href="<?php echo $root;?>web_root/front_css/css/bootstrap.css" />
  	<link rel="stylesheet" type="text/css" href="<?php echo $root;?>web_root/front_css/css/style.css" />
  	<link rel="stylesheet" type="text/css" href="<?php echo $root;?>web_root/front_css/css/animate.css" />

@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>AYR Group Admin Login</title>
+<title>Superstore.ciy Admin Login</title>
 <!-- metatags-->
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>

@@ -24,7 +24,6 @@
                             <th> Reference Id</th>
                             <th> Package Amount</th>
                             <th> Activation Date</th>
-                            <th> Total Purchase</th>
                             <th> Password</th>
                             <th> Action</th>
                         </tr>
@@ -46,7 +45,7 @@
                             <td><?php echo ($resultValue->referrer_id);?></td>
                             <td><?php $packageAmount=getPackageAmtByUniqueId($resultValue->unique_id); if($packageAmount=='0'){ echo "Free Account"; }else { echo $packageAmount; }  ?></td> 
 							<td><?php if($resultValue->active_date!='0000-00-00 00:00:00'){ echo date("d-M-Y H:i:s", strtotime($resultValue->active_date)); } ?></td>
-							<td><?php echo number_format($this->Form_model->getTotalUserPurchase($resultValue->member_id),2); ?></td>
+							
                             <td><?php echo ($resultValue->password);?></td>
                             <td><a  target="_blank" href="<?php echo base_url('admin/edit-user'); ?>/<?php echo $resultValue->member_id; ?>"><span class='label label-info'><i class='fa fa-pencil'></i> Edit</span></a></td>
                         </tr>

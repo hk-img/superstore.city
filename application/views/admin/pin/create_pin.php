@@ -39,17 +39,17 @@
 							<label class="" for="exampleInputEmail1" >Enter Total Pin No.</label><span class="required" style="color:red">*</span>
                             <input type="box"  value="" placeholder="Enter Total Pin No." class="form-control" name="pin_no" required />
                     </div>
-					<div class="form-group">
+					<div class="form-group" style="display:none" >
 							<label class="" for="exampleInputEmail1">Enter Pin Amount</label><span class="required" style="color:red">*</span>
-							<input type="text" class="form-control" placeholder="Enter Pin Amount" onkeypress="return isNumberKey(event)" name="amount" required />
+							<input type="text" class="form-control" value="2200" placeholder="Enter Pin Amount" onkeypress="return isNumberKey(event)" name="amount" required />
                     </div>
-					<div class="form-group">
+					<div class="form-group" style="display:none">
 							<label class="" for="exampleInputEmail1">Enter Business Volume</label><span class="required" style="color:red">*</span>
 							<input type="text" value="1000" class="form-control" onkeypress="return isNumberKey(event)" placeholder="Enter Business Volume" name="business_volume" required  />
                     </div>
-					<div class="form-group">
+					<div class="form-group" style="display:none">
 							<label class="" for="exampleInputEmail1">Enter Capping Value</label><span class="required" style="color:red">*</span>
-							<input type="text" value="2000" class="form-control" onkeypress="return isNumberKey(event)" placeholder="Enter Capping Value" name="pv_value" required  />
+							<input type="text" value="1000" class="form-control" onkeypress="return isNumberKey(event)" placeholder="Enter Capping Value" name="pv_value" required  />
                     </div>
 					<button type="submit" class="btn btn-primary btn-w-md">Submit</button>
 				</div>

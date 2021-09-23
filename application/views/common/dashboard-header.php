@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <link rel="shortcut icon" href="<?php echo base_url(); ?>web_root/images/favicon.png">
-  <title><?php if(isset($title)){ echo $title; }else{ echo 'AYR Group'; } ?></title>
+  <title><?php if(isset($title)){ echo $title; }else{ echo 'Superstore.city'; } ?></title>
 <link rel="stylesheet" type="text/css" href="<?php echo $root;?>web_root/front_css/css/bootstrap.css"/>
 <link rel="stylesheet" href="<?php echo $root;?>web_root/front_css/font-awesome-4.6.1/css/font-awesome.min.css">
 <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -50,15 +50,15 @@
             <li>
               <a href="<?php echo base_url('change-password'); ?>">Change Password</a>
             </li>
-            <li>
+            <!--<li>
               <a href="<?php echo base_url('upgrade-account'); ?>">Upgrade Account</a>
-            </li>
+            </li>-->
              <li>
               <a href="<?php echo base_url('current-profit'); ?>">Current Profit</a>
             </li>
-            <li>
+            <!--<li>
               <a href="<?php echo base_url('rewards'); ?>">Reward</a>
-            </li>
+            </li>-->
           </ul>
         </li>
         <li class="nav-item">

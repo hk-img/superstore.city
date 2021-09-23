@@ -47,11 +47,11 @@
            <div class="widget widget_services">
              <!-- <h5 class="footer-title">Our links</h5> -->
              <ul>
-               <li><a href="javascript:void(0);">Home</a></li>
-               <li><a href="javascript:void(0);">Legal Documents</a></li>
-               <li><a href="javascript:void(0);">Contact Us</a></li>
-               <li><a href="javascript:void(0);">Login</a></li>
-               <li><a href="javascript:void(0);">Register</a></li>
+               <li><a href="<?= base_url(''); ?>">Home</a></li>
+               <li><a href="<?= base_url('legal-document'); ?>">Legal Documents</a></li>
+               <li><a href="<?= base_url('contact-us'); ?>">Contact Us</a></li>
+               <li><a href="<?= base_url('login'); ?>">Login</a></li>
+               <li><a href="<?= base_url('registration'); ?>">Register</a></li>
              </ul>
            </div>
          </div>

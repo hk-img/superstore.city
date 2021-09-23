@@ -40,6 +40,7 @@
 				<span class="mainspanclass" data-translate="">Show Kyc</span>
 			</a> 
 	   </li> 
+	   <!--
 	   <li>
 		   <a href="/#"><i class="fa fa-product-hunt"><span class="icon-bg bg-orange"></span></i>  
 					<span class="icon-bg bg-danger"></span> </i>
@@ -51,7 +52,7 @@
 				<li><a href="<?php echo base_url('admin/show-repurchase-product'); ?>"><i class="fa fa-circle"></i><span data-translate=""> Repurchase Product</span></a></li> 
 		        <li><a href="<?php echo base_url('admin/repurchase-bonus'); ?>"><i class="fa fa-circle"></i><span data-translate=""> Repurchase Bonus</span></a></li> 
 			</ul>
-	   </li>  
+	   </li>  -->
 	   <li>
 		   <a href="/#"><i class="fa fa-newspaper-o"><span class="icon-bg bg-success"></span></i>  
 					<span class="icon-bg bg-danger"></span> </i>
@@ -68,12 +69,13 @@
 	   <li><a href="<?php echo base_url('admin/user-statement'); ?>"><i class="fa fa-exchange"><span class="icon-bg bg-orange"></span></i>
 			<span class="mainspanclass" data-translate="">User Statement</span> </a>
 		 </li>	
+		 <!--
 		<li><a href="<?php echo base_url('admin/show-turnover'); ?>"><i class="fa fa-product-hunt"><span class="icon-bg bg-green"></span></i>
 			<span class="mainspanclass" data-translate="">Show Turnover</span> </a>
 		</li>	
 		<li><a href="<?php echo base_url('admin/show-bonanza'); ?>"><i class="fa fa-gift"><span class="icon-bg bg-green"></span></i>
 			<span class="mainspanclass" data-translate="">Bonanza Offer</span> </a>
-		</li>	 
+		</li>	--> 
     </ul>
  </div>
 </aside>

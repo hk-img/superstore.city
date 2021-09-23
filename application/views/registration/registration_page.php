@@ -63,9 +63,9 @@
 				
 						<div class="form-group  text-center col-sm-12 col-sm-12 col-xs-12 " style="margin-bottom: 0;">
 							<div class="register">
-								<a href="#" type="submit" class="btn-reply margin-zero btn-login text-white" id="submit_reg_bt"
+								<button type="submit" class="btn-reply margin-zero btn-login text-white" id="submit_reg_bt"
 									name="register" value="register"
-									style="font-size:16px;color: #fff;">Register</a>
+									 	style="background: transparent;border:none;color:#fff">Register</button>
 							</div>
 						</div>
 

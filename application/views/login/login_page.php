@@ -41,8 +41,8 @@
 								</div>
 								<div class="form-group text-center col-sm-12 col-sm-12 col-xs-12" style="margin-top: 15px; margin-bottom: 0;">
 									<div class="register" style="margin-left: 0;">
-										<a href="#" type="submit" class="btn-reply margin-zero btn-login" name="login"
-											value="login" style="color: #fff; ">Login</a>
+										<button type="submit" class="btn-reply margin-zero btn-login" name="login"
+											value="login" style="background: transparent;border:none;color:#fff">Login</button>
 									</div>
 								</div>
 
