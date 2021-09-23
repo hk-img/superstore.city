@@ -398,7 +398,7 @@ class Profile extends CI_Controller {
 			'member_id' => $this->session->userdata('userlogin'),
 		); 
 		$unique_id=getUniqueIdById($this->session->userdata('userlogin'));
-		$result['result']=$this->db->order_by('member_id','desc')->where('referrer_id',$unique_id)->get('str_member')->result();
+		$result['result']=$this->db->order_by('member_id','desc')->where('referrer_id',$unique_id)->get('str_member')->result_array();
 		$this->load->view('common/dashboard-header',$title);
 		$this->load->view('group/direct_group',$result);
 		$this->load->view('common/dashboard-footer');

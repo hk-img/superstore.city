@@ -687,7 +687,7 @@ function getBothleftAndrightChildRec(array $elements, $parentId) {
 	function pinAmountIdByPinNo($pinNo)
 	{
 		$pin_amountid=0;
-		foreach(SelectQuery('pin_amountid','str_pinlist','pin_no',$pinNo) as $raa) $pin_amountid=$raa->pin_amountid;
+		foreach(SelectQuery('pin_id','str_pinlist','pin_no',$pinNo) as $raa) $pin_amountid=$raa->pin_amountid;
 		return $pin_amountid;
 	}
 	/*==End pin work==*/

@@ -12,12 +12,12 @@ class Registration extends CI_Controller {
 		if(!empty($this->input->post()) && $this->input->post('register')=='register')
 		{		
 	 
-			// $this->form_validation->set_rules('pin', 'Enter PIN', 'trim|required|callback_ischeckvalidPinExist',
-				// array(
-					// 'required'  => '%s Can not be empty.',  
-					// 'ischeckvalidPinExist'  => '! Please Enter Valid Pin.',  
-				// ) 
-			// );
+			$this->form_validation->set_rules('pin', 'Enter PIN', 'trim|required|callback_ischeckvalidPinExist',
+				array(
+					'required'  => '%s Can not be empty.',  
+					'ischeckvalidPinExist'  => '! Please Enter Valid Pin.',  
+				) 
+			);
 	 
 			$this->form_validation->set_rules('unique_id', 'Sponsor ID', 'trim|required|callback_isUniqueIdExist',
 				array(
@@ -31,13 +31,13 @@ class Registration extends CI_Controller {
 					'required'  => 'You have not select %s.',   
 				) 
 			); 
-				// $data['pin']=$this->input->post('pin');					
+				$data['pin']=$this->input->post('pin');					
 				$data['unique_id']=$this->input->post('unique_id');					
 				$data['tree_side']=$this->input->post('tree_side');				
 			 if ($this->form_validation->run() == true)
 			 { 
 					$data['active']='2';
-					// $data['pin']=$this->input->post('pin');
+					$data['pin']=$this->input->post('pin');
 					$data['unique_id']=$this->input->post('unique_id');
 					$data['tree_side']=$this->input->post('tree_side');
 										
@@ -52,21 +52,21 @@ class Registration extends CI_Controller {
 		{			
 		
 		
-			// $this->form_validation->set_rules('pin', 'Enter PIN', 'trim|required|callback_ischeckvalidPinExist',
-				// array(
-					// 'required'  => '%s Can not be empty.',  
-					// 'ischeckvalidPinExist'  => '! Please Enter Valid Pin.',  
-				// ) 
-			// );
+			$this->form_validation->set_rules('pin', 'Enter PIN', 'trim|required|callback_ischeckvalidPinExist',
+				array(
+					'required'  => '%s Can not be empty.',  
+					'ischeckvalidPinExist'  => '! Please Enter Valid Pin.',  
+				) 
+			);
 			
 			/*==redirect to homepage if pin is invaild===*/
 			
-			// if($this->checkPasswordValidation($this->input->post('password1')) == FALSE)
-			// {
-				// $this->session->set_userdata('storefailmsg','Please enter valid pin.');
-				// header("location:".base_url('login'));
-				// die;
-			// }	
+			if($this->checkPasswordValidation($this->input->post('password1')) == FALSE)
+			{
+				$this->session->set_userdata('storefailmsg','Please enter valid pin.');
+				header("location:".base_url('login'));
+				die;
+			}	
 			
 			/*==check password validation==*/
 			
@@ -107,15 +107,15 @@ class Registration extends CI_Controller {
 						'required'  => '%s can not be empty.',    
 						'matches'  => '%s should be match.',    
 					) 
-				);
+				); 
 				
 				if($this->form_validation->run() == TRUE)
 				{
 					
 					/*=====Registration work ====*/
 					$regdata=$this->input->post();
-					// $pin=$regdata['pin'];
-					// unset($regdata['pin']);
+					$pin=$regdata['pin'];
+					unset($regdata['pin']);
 					unset($regdata['password1']);
 					unset($regdata['register']); 
 				 
@@ -149,14 +149,11 @@ class Registration extends CI_Controller {
 					/*=Insert data in str_member create for member registration==*/
 					
 					
-					// $pinAmountId=pinAmountIdByPinNo($pin);
-					// $regdata['package_amount']=checkPinAmount($pin);
-					// $regdata['business_volume']=checkPinBusinessVolume($pin);
-					// $regdata['pv_value']=checkPinPvValue($pin);
-					
-					$regdata['package_amount']='0.00';
-					$regdata['business_volume']='0.00';
-					$regdata['pv_value']='0';
+					$pinAmountId=pinAmountIdByPinNo($pin);
+					$regdata['package_amount']=checkPinAmount($pin);
+					$regdata['business_volume']=checkPinBusinessVolume($pin);
+					$regdata['pv_value']=checkPinPvValue($pin);
+					 
 					$memberId=$this->Form_model->insert_data($regdata,'str_member');
 					
 					
@@ -164,12 +161,12 @@ class Registration extends CI_Controller {
 					
 					/*=Insert data in str_pinlist update entry	 for used pin==*/
 					
-					// $pinArray=array(
-						// 'particular_id'=>'2',
-						// 'used_status'=>'1',
-						// 'used_byid'=>$memberId,
-					// ); 
-					// $this->Form_model->update_data('str_pinlist',$pinArray,'pin_no',$pin);
+					$pinArray=array(
+						'particular_id'=>'2',
+						'used_status'=>'1',
+						'used_byid'=>$memberId,
+					); 
+					$this->Form_model->update_data('str_pinlist',$pinArray,'pin_no',$pin);
 					  
 					 /*==send mail==*/
 					 	$message = "<html>
@@ -192,7 +189,7 @@ class Registration extends CI_Controller {
 							</body>
 							</html>"; 
 							
-					MailSentNow($message,'Registration',$regdata['email']);
+					// MailSentNow($message,'Registration',$regdata['email']);
 					$this->session->set_userdata('storesucmsg','Congratulations,Member added successfully');
 					
 					if($this->session->userdata('userlogin')=='')
@@ -208,7 +205,7 @@ class Registration extends CI_Controller {
 				else
 				{
 					$data['active']='2';
-					// $data['pin']=$this->input->post('pin');
+					$data['pin']=$this->input->post('pin');
 					$data['unique_id']=$this->input->post('referrer_id');
 					$data['tree_side']=$this->input->post('tree_side');
 				}

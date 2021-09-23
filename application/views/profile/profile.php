@@ -21,6 +21,7 @@
           </div>
 		</a>
         </div>
+		<!--
         <div class="col-xl-3 col-sm-6 col-xs-12 mb-3">
 		<a target="_blank" href="<?php echo base_url('registration'); ?>">
           <div class="card text-white o-hidden h-100" style="background-image: linear-gradient(45deg, #f93a5a, #f7778c) !important;">
@@ -33,6 +34,7 @@
           </div>
 		</a>
         </div>
+		-->
         <div class="col-xl-3 col-sm-6 col-xs-12 mb-3">
 		<a href="<?php echo base_url('genealogy'); ?>">
           <div class="card text-white o-hidden h-100" style="background-image: linear-gradient(to left, #48d6a8 0%, #029666 100%) !important;">
@@ -69,6 +71,7 @@
           </div>
 		</a>
         </div>
+		<!--
         <div class="col-xl-3 col-sm-6 col-xs-12 mb-3">
 		<a href="<?php echo base_url('rank-raward'); ?>">
           <div class="card text-white o-hidden h-100" style="background-image: linear-gradient(to left, #48d6a8 0%, #029666 100%) !important;">
@@ -81,6 +84,7 @@
           </div>
 		</a>
         </div>
+		-->
         <div class="col-xl-3 col-sm-6 col-xs-12 mb-3">
 		<a href="<?php echo base_url('change-password'); ?>">
           <div class="card text-white o-hidden h-100" style="background-image: linear-gradient(45deg, #f93a5a, #f7778c) !important;">
@@ -157,10 +161,12 @@
 					  <td>Paid BV</td>
 					  <td><?php echo number_format($leftrightBusiness,2); ?></td>
 					</tr>
+					<!--
 					<tr>
 					  <td>Repurchase LBV</td>
 					  <td><?php echo number_format($this->Form_model->getTotalRepurchaeBv($value->unique_id,'left'),2); ?></td>
 					</tr>
+					-->
 				  </tbody>
 				</table>
 			  </div>
@@ -207,10 +213,12 @@
 					  <td>Paid BV</td>
 					  <td><?php echo number_format($totaLCurrentRightBusine,2); ?></td>
 					</tr>
+					<!--
 					<tr>
 					  <td>Repurchase RBV</td>
 					  <td><?php echo number_format($this->Form_model->getTotalRepurchaeBv($value->unique_id,'right'),2); ?></td>
 					</tr>
+					-->
 				  </tbody>
 				</table>
 			  </div>

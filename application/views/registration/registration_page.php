@@ -49,12 +49,11 @@
 										/*1st PART OF REGISTRATION*/
 										if($active==1)
 										{
-									  ?>
-						<!--
+									  ?> 
 									  <div class="form-group"  >
 											<!--<label for="unique_id">Enter PIN  <span class="required"> * </span></label>-->
-						<!--<input type="text" placeholder="Enter PIN"  required name="pin" value="<?php if($pinValue!='') { echo $pinValue; }else{ echo set_value('pin'); } ?>" class="form-control"   >
-										 </div>  -->
+											<input type="text" placeholder="Enter PIN"  required name="pin" value="<?php if($pinValue!='') { echo $pinValue; }else{ echo set_value('pin'); } ?>" class="form-control"   >
+										 </div> 
 										 <div class="input-group">
 										<div class="input-group-prepend"><span class="input-group-text">
 										<i class="fa fa-user"></i>
@@ -136,8 +135,8 @@
 						<div class="form-group">
 							<input type="password" required placeholder="Confirm Password" name="password1"
 								value="<?php echo set_value('password1'); ?>" class="form-control" id="password1">
-						</div>
-						<!--<input type="hidden" name="pin"  required value="<?php echo $pin; ?>" />-->
+						</div> 
+						<input type="hidden" name="pin"  required value="<?php echo $pin; ?>" />
 						<input type="hidden" name="referrer_id" required value="<?php echo $unique_id; ?>" />
 						<input type="hidden" name="tree_side" required value="<?php echo $tree_side; ?>" />
 						<button type="submit" class="btn btn-default register-btns" id="submit_reg_bt" name="register"
