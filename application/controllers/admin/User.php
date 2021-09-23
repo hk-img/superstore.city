@@ -8,7 +8,7 @@ class User extends CI_Controller {
 	 public function index()
 	 {
 	     $data['title']="All Users";
-	     $result['result']=$this->db->order_by('member_id','desc')->get_where('str_member',array('member_id >','1'))->result();
+	     $result['result']=$this->db->order_by('member_id','desc')->get_where('str_member',array('member_id >'=>'1'))->result();
 		$this->load->view('admin/header',$data);
 		$this->load->view('admin/user/userlist',$result);
 		$this->load->view('admin/footer');
