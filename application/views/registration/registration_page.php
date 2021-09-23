@@ -1,7 +1,23 @@
 <?php 
 	$root = base_url();
 ?>
+<style>
+.register-form{
+    display: unset !important;
+    justify-content: !important;
+}
+.register-btns{
+	margin-bottom: 20px !important;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    background-color: #f55f8d;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 28px;
+}
 
+</style>
 <section>
 	<div class="container-fluid sing-in-form bg-background login-container">
 		<div class="container">
@@ -11,7 +27,7 @@
 						<div class="section-head style-1">
 						<h2 class="title">Registration</h2>
 						</div>
-					<div class="col-md-12 col-sm-12 col-xs-12" style="display: flex; justify-content: center;">
+					<div class="col-md-12 col-sm-12 col-xs-12 register-form" style="display: flex; justify-content: center;">
 						<?php echo validation_errors(); ?>
 						<?php  echo form_open_multipart(base_url('registration')); ?>
 						<?php 
@@ -124,7 +140,7 @@
 						<!--<input type="hidden" name="pin"  required value="<?php echo $pin; ?>" />-->
 						<input type="hidden" name="referrer_id" required value="<?php echo $unique_id; ?>" />
 						<input type="hidden" name="tree_side" required value="<?php echo $tree_side; ?>" />
-						<button type="submit" class="btn btn-default" id="submit_reg_bt" name="register"
+						<button type="submit" class="btn btn-default register-btns" id="submit_reg_bt" name="register"
 							value="register1" style="margin-bottom:20px;">Register</button>
 						<?php } ?>
 						<?php echo form_close(); ?>
