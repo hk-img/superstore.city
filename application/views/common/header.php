@@ -30,7 +30,7 @@ $(document).ready( function() {
 </script>
 
 <div class="container-fluid" style="padding:0">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval = 'false'>
     
       <!-- Wrapper for slides -->
       <div class="carousel-inner">

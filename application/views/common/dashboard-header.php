@@ -23,7 +23,10 @@
 <body style="margin-bottom: 56px;padding-top: 56px;">
  
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>web_root/images/logo-tea.png" class="img-responsive" style="height: 40px;"></a>
+    <a class="navbar-brand" href="<?php echo base_url(); ?>">
+    <!-- <img src="<?php echo base_url(); ?>web_root/images/logo-tea.png" class="img-responsive" style="height: 40px;"> -->
+    <span class="hidden-md logo clg" style="color: #000;">TMSS</span>
+  </a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
     </button>

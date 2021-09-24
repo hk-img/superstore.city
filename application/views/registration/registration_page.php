@@ -50,11 +50,18 @@
 										if($active==1)
 										{
 									  ?> 
-									  <div class="form-group"  >
-											<!--<label for="unique_id">Enter PIN  <span class="required"> * </span></label>-->
+									  <!-- <div class="form-group"  >
+											<label for="unique_id">Enter PIN  <span class="required"> * </span></label>
 											<input type="text" placeholder="Enter PIN"  required name="pin" value="<?php if($pinValue!='') { echo $pinValue; }else{ echo set_value('pin'); } ?>" class="form-control"   >
-										 </div> 
-										 <div class="input-group">
+										 </div>  -->
+										 <div class="input-group" style="width: 100%;">
+										<div class="input-group-prepend"><span class="input-group-text">
+										<i class="fa fa-key" aria-hidden="true"></i>
+																			</span>
+									</div>
+									<input type="text" placeholder="Enter PIN"  required name="pin" value="<?php if($pinValue!='') { echo $pinValue; }else{ echo set_value('pin'); } ?>" class="form-control"   >
+								</div>
+										 <div class="input-group" style="width: 100%;">
 										<div class="input-group-prepend"><span class="input-group-text">
 										<i class="fa fa-user"></i>
 										</span>
@@ -77,7 +84,7 @@
 								</div>
 				
 						<div class="form-group  text-center col-sm-12 col-sm-12 col-xs-12 " style="margin-bottom: 0;">
-							<div class="register">
+							<div class="register" style="margin-left: 0;">
 								<button type="submit" class="btn-reply margin-zero btn-login text-white" id="submit_reg_bt"
 									name="register" value="register"
 									 	style="background: transparent;border:none;color:#fff">Register</button>

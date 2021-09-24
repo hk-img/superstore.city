@@ -41,7 +41,7 @@ $root = base_url();
  </section> -->
  <section class="content-inner-2 ">
    <div class="container">
-     <div class="row" style="display: flex; align-items: center;">
+     <div class="row mobile-align" style="display: flex; align-items: center;">
        <div class="col-xl-6 col-lg-7 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.2s">
          <div class="section-head style-1">
            <h6 class="sub-title bgl-primary m-b20 text-primary">Welcome</h6>
@@ -153,7 +153,7 @@ $root = base_url();
 
              </a></div>
            <div class="wraper-effect"></div>
-           <div class="icon-content">
+           <div class="icon-content margin-left-ct">
              <h4 class="dlab-title m-b15">Strategy &amp; Research</h4>
              <p>Vestibulum a efficitur ex. Ut iaculis dapibus iaculis. Praesent lacus magna, rhoncus quis magna quis,
                pellentesque luctus leoam iaculis venenatis.</p>

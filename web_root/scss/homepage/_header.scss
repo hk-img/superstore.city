@@ -26,6 +26,10 @@
     }
   }
 }
+.navbar-brand {
+  height: auto;
+  padding: 0 15px;
+}
 .navbar-default .navbar-nav > li > a.login,
 .navbar-default .navbar-nav > li > a.register {
   color: #fff;
@@ -136,4 +140,7 @@
 }
 .navbar-brand > img {
   width: 135px;
+}
+.clg {
+  color: #000 !important;
 }

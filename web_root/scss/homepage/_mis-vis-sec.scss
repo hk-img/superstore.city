@@ -17,13 +17,14 @@
     }
     h3 {
       font-size: 25px;
-      color: #1f2471;
+      color: $color-primary;
     }
   }
   .vis-heading {
     justify-content: flex-end;
     h3 {
       margin-right: 15px;
+      color: $color-primary;
     }
     i {
       margin-right: 0;

@@ -16,14 +16,14 @@ $root = base_url();
 									style="display: flex; justify-content: center; flex-direction: column;">
 									<div class="input-group">
 										<div class="input-group-prepend" id="otpDiv"><span class="input-group-text">
-												<i class="fa fa-unlock-alt" aria-hidden="true"></i>
+												<i class="fa fa-user" aria-hidden="true"></i>
 											</span>
 										</div>
 										<input id="mobiles" name="otp" class="form-control" required
 											placeholder="Enter Advisor Id" type="text">
 									</div>
 									<div class="form-group col-md-12 col-sm-12 col-xs-12 text-center">
-										<div class="register">
+										<div class="register" style="margin-left: 0;">
 											<a href="" type="submit" style="color: #fff;"
 												class="btn-reply margin-zero btn-login col-md-6 col-sm-6 col-xs-12">Submit</a>
 										</div>

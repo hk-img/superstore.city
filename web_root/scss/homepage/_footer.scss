@@ -2,7 +2,7 @@
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
-  background-color: $color-primary;
+  background-color: $footer-bg;
   padding-top: 40px;
 }
 .site-footer.style-1 .footer-top {
@@ -117,7 +117,7 @@ footer .widget_services ul li a {
   color: #fff;
   padding: 5px 0;
   display: block;
-  font-size: 18px;
+  font-size: 14px;
   transition: all 0.5s;
 }
 footer .widget_services ul li a:hover {
@@ -162,13 +162,13 @@ footer .widget_services ul li a:hover {
 }
 .widget_about {
   p {
-    font-size: 18px;
+    font-size: 14px;
     color: #fff;
     margin-bottom: 15px;
   }
 }
 footer .footer-bottom {
-  background-color: #d11b51;
+  background-color: $copyright-bg;
   font-size: 15px;
   padding: 15px 0;
   margin-top: 15px;
@@ -176,4 +176,16 @@ footer .footer-bottom {
 }
 .img-size {
   width: 200px;
+}
+
+.bg-img {
+  background: #fff;
+  border-radius: 5px;
+}
+.hidden-md {
+  font-size: 20px;
+  color: #fff;
+}
+.mt {
+  margin-top: 15px;
 }
