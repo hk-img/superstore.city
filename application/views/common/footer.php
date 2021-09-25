@@ -10,8 +10,8 @@
        <div class="footer-info wow fadeIn" data-wow-duration="2s" data-wow-delay="0.8s">
          <div class="row align-items-center">
            <div class="col-xl-6 col-md-4 mt">
- 					<!-- <img src="<?php echo $root;?>web_root/images/logo-tea.png" alt="Logo" class="img-size bg-img img-responsive" /> -->
-           <span class="hidden-md logo">TMSS</span> 
+ 					<img src="<?php echo $root;?>web_root/images/logo-r.png" alt="Logo" class="img-size bg-img img-responsive" />
+           <!-- <span class="hidden-md logo">TMSS</span>  -->
         </div>
            <div class="col-xl-3 col-md-4 col-sm-6">
              <div class="icon-bx-wraper left m-b10">

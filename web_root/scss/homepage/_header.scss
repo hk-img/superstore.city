@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   margin: 0;
-  padding: 10px 0;
+  padding: 6px 0;
   z-index: 999;
   .container {
     @include flex();
@@ -139,7 +139,7 @@
   }
 }
 .navbar-brand > img {
-  width: 135px;
+  width: 105px;
 }
 .clg {
   color: #000 !important;

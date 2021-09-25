@@ -43,7 +43,7 @@ body {
   left: 0;
   width: 100%;
   margin: 0;
-  padding: 10px 0;
+  padding: 6px 0;
   z-index: 999;
 }
 
@@ -191,7 +191,7 @@ body {
 }
 
 .navbar-brand > img {
-  width: 135px;
+  width: 105px;
 }
 
 .clg {
@@ -885,7 +885,7 @@ footer .footer-bottom {
 }
 
 .img-size {
-  width: 200px;
+  width: 100px;
 }
 
 .bg-img {
@@ -899,7 +899,7 @@ footer .footer-bottom {
 }
 
 .mt {
-  margin-top: 15px;
+  margin-top: 0;
 }
 
 .legal-container {
