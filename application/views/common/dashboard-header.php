@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <link rel="shortcut icon" href="<?php echo base_url(); ?>web_root/images/logo-r.png">
-  <title><?php if(isset($title)){ echo $title; }else{ echo 'Superstore.city'; } ?></title>
+  <title><?php if(isset($title)){ echo $title; }else{ echo 'Royal Super Store'; } ?></title>
 <link rel="stylesheet" type="text/css" href="<?php echo $root;?>web_root/front_css/css/bootstrap.css"/>
 <link rel="stylesheet" href="<?php echo $root;?>web_root/front_css/font-awesome-4.6.1/css/font-awesome.min.css">
 <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -24,7 +24,7 @@
  
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href="<?php echo base_url(); ?>">
-    <img src="<?php echo base_url(); ?>web_root/images/logo-r.png" class="img-responsive" style="height: 40px;">
+    <img src="<?php echo base_url(); ?>web_root/images/logo-r.png" class="img-responsive" style="height: 60px;">
     <!-- <span class="hidden-md logo clg" style="color: #000;">TMSS</span> -->
   </a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

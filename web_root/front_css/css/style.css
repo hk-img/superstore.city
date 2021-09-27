@@ -191,11 +191,15 @@ body {
 }
 
 .navbar-brand > img {
-  width: 105px;
+  width: 120px;
 }
 
 .clg {
   color: #000 !important;
+}
+
+.carousel-control {
+  display: none !important;
 }
 
 .carousel {
@@ -885,7 +889,7 @@ footer .footer-bottom {
 }
 
 .img-size {
-  width: 100px;
+  width: 120px;
 }
 
 .bg-img {
@@ -1043,7 +1047,7 @@ textarea {
     font-size: 12px;
   }
   footer .footer-bottom {
-    font-size: 12px;
+    font-size: 11px;
     padding: 10px 0;
     margin-top: 10px;
   }

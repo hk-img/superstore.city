@@ -62,7 +62,7 @@
    <div class="footer-bottom wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
      <div class="container">
        <div class="row">
-         <div class="col-sm-12 text-center"><span class="copyright-text">Copyright © 2021 TMSS. All rights reserved.</span></div>
+         <div class="col-sm-12 text-center"><span class="copyright-text">Copyright © 2021 Royal Super Store. All rights reserved.</span></div>
        </div>
      </div>
    </div>
