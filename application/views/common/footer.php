@@ -30,7 +30,7 @@
 
 </a></div>
                <div class="icon-content icnew">
-                 <p>Royal super store,Chandigarh city</p>
+                 <p>Royal super store,Chandigarh</p>
                </div>
              </div>
            </div>
