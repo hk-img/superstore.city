@@ -9,9 +9,10 @@
      <div class="container">
        <div class="footer-info wow fadeIn" data-wow-duration="2s" data-wow-delay="0.8s">
          <div class="row align-items-center">
-           <div class="col-xl-6 col-md-4">
- 					<img src="<?php echo $root;?>web_root/images/logo-tea.png" alt="Logo" class="img-size img-responsive" />
-           </div>
+           <div class="col-xl-6 col-md-4 mt">
+ 					<img src="<?php echo $root;?>web_root/images/logo-r.png" alt="Logo" class="img-size bg-img img-responsive" />
+           <!-- <span class="hidden-md logo">TMSS</span>  -->
+        </div>
            <div class="col-xl-3 col-md-4 col-sm-6">
              <div class="icon-bx-wraper left m-b10">
                <div class="icon-lg"><a href="javascript:void(0);" class="icon-cell">
@@ -29,7 +30,7 @@
 
 </a></div>
                <div class="icon-content icnew">
-                 <p>Marmora Road Chi Minh City, Vietnam</p>
+                 <p>Royal super store,Chandigarh</p>
                </div>
              </div>
            </div>
@@ -61,7 +62,7 @@
    <div class="footer-bottom wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
      <div class="container">
        <div class="row">
-         <div class="col-sm-12 text-center"><span class="copyright-text">Copyright © 2021 teamoney. All rights reserved.</span></div>
+         <div class="col-sm-12 text-center"><span class="copyright-text">Copyright © 2021 Royal Super Store. All rights reserved.</span></div>
        </div>
      </div>
    </div>
@@ -75,7 +76,6 @@
 
 <script src="<?php echo $root; ?>web_root/jquery.js"></script>
 
-<script src="<?php echo $root; ?>web_root/admin_root/js/bootstrap.min.js"></script>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script> 	 
  

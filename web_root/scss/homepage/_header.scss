@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   margin: 0;
-  padding: 10px 0;
+  padding: 6px 0;
   z-index: 999;
   .container {
     @include flex();
@@ -25,6 +25,10 @@
       }
     }
   }
+}
+.navbar-brand {
+  height: auto;
+  padding: 0 15px;
 }
 .navbar-default .navbar-nav > li > a.login,
 .navbar-default .navbar-nav > li > a.register {
@@ -135,5 +139,11 @@
   }
 }
 .navbar-brand > img {
-  width: 135px;
+  width: 120px;
+}
+.clg {
+  color: #000 !important;
+}
+.carousel-control {
+  display: none !important;
 }

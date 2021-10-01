@@ -1,0 +1,225 @@
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .login-container .modalI,
+  .paddingZero {
+    padding: 0;
+  }
+  .box-shadow {
+    padding: 15px 0;
+  }
+  .login-container {
+    padding: 20px 0;
+  }
+  .section-head h2 {
+    font-size: 26px;
+  }
+  .img-size {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  .footer-info .icon-bx-wraper {
+    margin-bottom: 5px;
+  }
+  .icon-lg {
+    text-align: end;
+    width: 12px;
+    margin-right: 15px;
+  }
+  .footer-info .icon-bx-wraper .icon-cell i {
+    font-size: 25px;
+  }
+  .footer-info .icon-bx-wraper p {
+    font-size: 14px;
+  }
+  .widget_services ul {
+    flex-direction: column;
+  }
+  footer .widget_services ul li a,
+  .icon-content p {
+    font-size: 12px;
+  }
+  footer .footer-bottom {
+    font-size: 11px;
+    padding: 10px 0;
+    margin-top: 10px;
+  }
+  .footer-info,
+  .section-head {
+    margin-bottom: 15px;
+  }
+  .widget_about p {
+    margin-bottom: 5px;
+  }
+  .read-more-btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .form-group {
+    margin-bottom: 0;
+  }
+  .aboutcompanyafter {
+    margin: 0 auto 15px;
+  }
+  .contact-container {
+    padding: 20px 0;
+  }
+  .mobile-align {
+    flex-direction: column;
+  }
+  .legal-container {
+    padding: 20px 15px;
+  }
+  .section-head .sub-title,
+  .content-inner-2 .section-head .sub-title {
+    padding: 10px 15px;
+    font-size: 12px;
+    margin-bottom: 0px;
+  }
+  .section-head h2 {
+    font-size: 18px;
+  }
+  .footer-info,
+  .section-head,
+  .content-inner-2 .section-head {
+    margin-bottom: 15px;
+  }
+  .icon-bx-wraper .icon-content,
+  .belf2 {
+    margin-left: 0;
+  }
+  .icon-content h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .why-us-container,
+  .content-inner-2 {
+    padding: 20px 0;
+  }
+  .why-us-container .icon-bx-wraper {
+    margin-bottom: 25px;
+  }
+  .mis-vis-img {
+    position: relative;
+    top: unset;
+    margin: 10px 0;
+  }
+
+  .content-inner-2 .section-head h2 {
+    font-size: 26px;
+  }
+  .icon-bx-wraper .icon-bx-md {
+    margin: 0;
+    margin-right: 0px;
+    min-width: 75px;
+    height: 75px;
+    margin-right: 15px;
+  }
+  .icon-bx-wraper .icon-bx-md::before {
+    width: 75px;
+    height: 75px;
+    left: 0;
+    top: 0;
+  }
+  .icon-bx-wraper .icon-bx-md a {
+    font-size: 44px;
+  }
+  .icon-bx-wraper .icon-bx-md a i {
+    font-size: 20px;
+    vertical-align: middle;
+  }
+  .icon-content h4 {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .title,
+  .our-mission .mis-heading h3 {
+    font-size: 20px !important;
+  }
+  .our-mission .mis-heading i {
+    font-size: 35px;
+    margin-right: 10px;
+  }
+  .mis-vis-img img {
+    width: 52%;
+  }
+  .our-mission .mis-text p {
+    font-size: 12px;
+  }
+  .icon-bx-wraper {
+    margin-bottom: 20px;
+  }
+  .icon-bx-wraper.style-3 .dlab-title,
+  .icon-bx-wraper.style-3 .icon-cell,
+  .icon-bx-wraper.style-3 p {
+    color: #fff;
+  }
+  .icon-bx-wraper.style-3,
+  .icon-bx-wraper.style-3 {
+    background-image: var(--gradient);
+    background-size: 200%;
+  }
+  .icon-bx-wraper.style-3 .wraper-effect,
+  .icon-bx-wraper.style-3 .wraper-effect {
+    right: -150px;
+    bottom: -150px;
+  }
+  .icon-bx-wraper.style-3 > [class*="icon-bx-"] .icon-cell i {
+    font-size: 25px;
+  }
+  .carousel-control {
+    font-size: 11px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+  }
+  .carousel-control.left {
+    left: 20px;
+  }
+  .carousel-control.right {
+    right: 20px;
+  }
+  .navbar-header {
+    width: 100%;
+    margin: 0;
+    padding: 5px 0;
+  }
+  .navbar-default .navbar-toggle,
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus {
+    border-color: transparent;
+    background: none;
+    border: 0;
+    padding: 0 10px;
+  }
+  .main-header .container .navbar-collapse {
+    margin-right: 0;
+  }
+  .navbar-toggle {
+    margin: 0;
+  }
+  .site-footer.style-1 {
+    padding-top: 20px;
+  }
+  .navbar-brand {
+    padding-left: 0;
+  }
+  .navbar-header {
+    margin: 0 !important;
+  }
+  .hidden-md {
+    font-size: 20px;
+    color: #fff;
+  }
+  .main-header .container,
+  .main-header .container .navbar-collapse .navbar-nav {
+    display: block;
+  }
+  .rightt-btn,
+  .lleft-btn {
+    margin: 0;
+    width: 34%;
+  }
+  .rightt-btn {
+    margin-top: 15px;
+  }
+}

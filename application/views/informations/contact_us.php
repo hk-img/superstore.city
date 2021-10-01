@@ -28,16 +28,16 @@ $root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME'
 
 </div>
 
-<div class="container-fluid" style="padding: 25px 15px 50px;">
+<div class="container-fluid" style="padding: 25px 15px 40px;">
 	<div class="container" style="padding:0px;">
-		<div class="col-md-12 col-sm-12 col-xs-12" style="padding:0px;  display: flex; align-items: center;">
-			<div class="col-md-6 col-sm-6 col-xs-12 borderRight">
+		<div class="col-md-12 col-sm-12 col-xs-12 mobile-align" style="padding:0px;  display: flex; align-items: center;">
+			<div class="col-md-6 col-sm-6 col-xs-12 borderRight paddingZero">
 				<div class="col-md-12 col-sm-12 col-xs-12" style="padding:0px;">
 					<div class="about-titel " style="width:100%;">
 						<div class="section-head style-1">
 							<h2 class="title">Send Us Mail</h2>
 						</div>
-						<div class="aboutcompanyafter" style="margin: 0px auto 25px;"></div>
+						<div class="aboutcompanyafter"></div>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12">
@@ -71,7 +71,7 @@ $root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME'
 							</span>
 						</div>
 						<textarea class="inputtext form-control" id="massege" name="massage"
-							style="height:100px;width:75%;" required=""></textarea>
+							style="height:100px;width:100%;" required=""></textarea>
 					</div>
 					<div class="form-group">
 						<div class="register">

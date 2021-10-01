@@ -65,7 +65,7 @@
 						{
 							?>
 							<div style="border-bottom:1px dotted #FD3F2A;">
-								<p><br>Welcome in AYRGROUP.</p>
+								<p><br>Welcome in Superstore.city.</p>
 							</div> 
 							<?php 
 						}

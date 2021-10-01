@@ -8,7 +8,7 @@ class User extends CI_Controller {
 	 public function index()
 	 {
 	     $data['title']="All Users";
-	     $result['result']=$this->db->order_by('member_id','desc')->get('str_member')->result();
+	     $result['result']=$this->db->order_by('member_id','desc')->get_where('str_member',array('member_id >'=>'1'))->result();
 		$this->load->view('admin/header',$data);
 		$this->load->view('admin/user/userlist',$result);
 		$this->load->view('admin/footer');
@@ -37,7 +37,7 @@ class User extends CI_Controller {
 	 
 	 public function userStatement()
 	 {
-		 $result['result']=$this->db->select('member_id,unique_id,name,account_no,ifsc_code')->get('str_member')->result();
+		 $result['result']=$this->db->select('member_id,unique_id,name,account_no,ifsc_code')->get_where('str_member',array('member_id >'=>'1'))->result();
 		 $data['title']="Show User Statement"; 
 		$this->load->view('admin/header',$data);
 		$this->load->view('admin/user/userStatement',$result);

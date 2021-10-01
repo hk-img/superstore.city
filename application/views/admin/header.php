@@ -8,7 +8,7 @@ $root = root();
 		die;
 	}
 ?>
-<title><?php if(isset($title)) { echo $title; }else { echo 'Ayr Group Admin'; } ?></title><meta charset="UTF-8" />
+<title><?php if(isset($title)) { echo $title; }else { echo 'Royal Super Store'; } ?></title><meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="<?php echo $root; ?>web_root/admin_root/css/main.css"/>   
 <link rel="stylesheet" href="<?php echo $root; ?>web_root/admin_root/font-awesome/css/font-awesome.css"/>
@@ -90,7 +90,7 @@ $root = root();
     <!-- Logo -->
       <div class="logo" >
          <span class="logo-icon glyphicon glyphicon-th-large" toggle-off-canvas style="cursor:pointer;"></span>
-			<span class="logo-text">Tea Money</span>
+			<span class="logo-text">TMSS</span>
         </a>
     </div>
     <!-- needs to be put after logo to make it work -->

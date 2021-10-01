@@ -9,7 +9,7 @@ class Kyc extends CI_Controller {
 	 public function index()
 	 {
 	     $data['title']="All Kyc Detail";
-	     $result['result']=$this->db->order_by('member_id','desc')->get('str_member')->result();
+	     $result['result']=$this->db->order_by('member_id','desc')->get_where('str_member',array('member_id >'=>'1'))->result();
 		$this->load->view('admin/header',$data);
 		$this->load->view('admin/kyc/kyclist',$result);
 		$this->load->view('admin/footer');

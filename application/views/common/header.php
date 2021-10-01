@@ -30,7 +30,7 @@ $(document).ready( function() {
 </script>
 
 <div class="container-fluid" style="padding:0">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval = 'false'>
     
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
@@ -46,7 +46,7 @@ $(document).ready( function() {
         </div><!-- End Item -->
  
          <div class="item">
-          <img src="<?php echo $root; ?>web_root/images/slider-2.jpg" class="img-responsive"> 
+          <img src="<?php echo $root; ?>web_root/images/slider-1.jpg" class="img-responsive"> 
 		  <!--
            <div class="carousel-caption">
             <h3>Headline</h3>
@@ -56,7 +56,7 @@ $(document).ready( function() {
         </div><!-- End Item -->
         
         <div class="item">
-          <img src="<?php echo $root; ?>web_root/images/slider-3.jpg" class="img-responsive">
+          <img src="<?php echo $root; ?>web_root/images/slider-1.jpg" class="img-responsive">
 		  <!--
            <div class="carousel-caption">
             <h3>Headline</h3>

@@ -5,11 +5,11 @@ $root = root();
  <html lang="en">
 
  <head>
- 	<title><?php if(isset($title)){ echo $title; }else{ ?>Teamoney<?php } ?></title>
+ 	<title><?php if(isset($title)){ echo $title; }else{ ?>Royal Super Store<?php } ?></title>
  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  	<meta charset="utf-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
- 	<link rel="shortcut icon" href="<?php echo base_url(); ?>web_root/images/favicon.png">
+ 	<link rel="shortcut i con" href="<?php echo base_url(); ?>web_root/images/logo-r.png">
  	<link rel="stylesheet" type="text/css" href="<?php echo $root;?>web_root/front_css/css/bootstrap.css" />
  	<link rel="stylesheet" type="text/css" href="<?php echo $root;?>web_root/front_css/css/style.css" />
  	<link rel="stylesheet" type="text/css" href="<?php echo $root;?>web_root/front_css/css/animate.css" />
@@ -44,7 +44,7 @@ margin-left: 225px;">
  			<div class="ui_close_x"></div>
  		</span>
  	</div>
-
+    
  	<div class="navbar navbar-default main-header" role="navigation">
  		<div class="container">
  			<div class="navbar-header">
@@ -52,10 +52,10 @@ margin-left: 225px;">
  					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
  						class="icon-bar"></span> <span class="icon-bar"></span> </button>
  				<a class="navbar-brand pad14" href="<?php echo $root; ?>home">
-
- 					<img src="<?php echo $root;?>web_root/images/logo-tea.png" alt="Logo" class="img-responsive" />
- 					<!-- <span class="hidden-md logo">teamoney</span> -->
- 				</a> </div>
+ 					<img src="<?php echo $root;?>web_root/images/logo-r.png" alt="Logo" class="img-responsive" />
+ 					<!-- <span class="hidden-md logo clg">TMSS</span> -->
+ 				</a> 
+			</div>
  			<div class="navbar-collapse collapse">
  				<ul class="nav navbar-nav navbar-right">
  					<li class="<?php if($this->session->userdata('tabmenu')=='home'){ echo "active"; }?>"><a
@@ -100,9 +100,9 @@ margin-left: 225px;">
  					<!--End Login Menu-->
 
  					<?php if ($this->session->userdata('userlogin') ==''){ ?>
- 					<li><a href="<?php echo base_url('login'); ?>" class="login left-btn"><span>Login</span></a> </li>
+ 					<li><a href="<?php echo base_url('login'); ?>" class="login left-btn lleft-btn"><span>Login</span></a> </li>
  					<li><a href="<?php echo base_url('registration'); ?>"
- 							class="register"><span>Register</span></a> </li>
+ 							class="register rightt-btn"><span>Register</span></a> </li>
  					<?php }else{ ?>
  					<li style="margin-left:13px;"><a href="<?php echo base_url('logout'); ?>"
  							class="register right-btn"><span>Logout</span></a></li>

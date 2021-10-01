@@ -22,8 +22,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	}
 ?>
 <body>
-	<div class="w3ls-main"> 
-			<div class="wthree-container" style="margin-top:7%">
+    <div class="left-boxsss">
+	
+	</div>
+	
+     <div class="right-boxsss">
+	   <div class="w3ls-main"> 
+			<div class="wthree-container">
 				<div class="wthree-form">
 					<div class="agileits-2">
 						<h2>login</h2>
@@ -49,6 +54,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					</form>
 				</div>
 			</div>
+	</div> 
 	</div> 
 		<script src="<?php echo base_url(); ?>web_root/admin_root/js/bootstrap.min.js"></script>
 	<!-- custom scrollbar plugin -->
