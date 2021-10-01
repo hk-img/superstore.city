@@ -95,9 +95,9 @@
 								value="<?php echo set_value('name'); ?>" class="form-control">
 						</div>
 
-						<div class="form-group">
+						<div class="form-group" style="display:none">
 							<select required class="form-control" name="gender" id="gender">
-								<option <?php if(set_value('gender')=='Male'){ echo "selected"; } ?> value="Male">Male
+								<option <?php if(set_value('gender')=='Male'){ echo "selected"; } ?> selected value="Male">Male
 								</option>
 								<option <?php if(set_value('gender')=='Female'){ echo "selected"; } ?> value="Female">
 									Female</option>
