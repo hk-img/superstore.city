@@ -155,10 +155,11 @@ class Registration extends CI_Controller {
 					$regdata['pv_value']=checkPinPvValue($pin);
 					 
 					$memberId=$this->Form_model->insert_data($regdata,'str_member');
+
 					
-					
-					
-					
+					// update left team value
+					$this->createTeamValue($memberId,$this->input->post('unique_id'),$regdata['business_volume']); 
+
 					/*=Insert data in str_pinlist update entry	 for used pin==*/
 					
 					$pinArray=array(
@@ -210,13 +211,139 @@ class Registration extends CI_Controller {
 					$data['tree_side']=$this->input->post('tree_side');
 				}
 						
-		}	
+		}
  
      	$this->load->view('common/headerall');
     	$this->load->view('registration/registration_page',$data);
     	$this->load->view('common/footer');
 	}
 	 
+
+	function chkTeam($memberId,$parentId)
+	{
+		$parentId=strtolower($parentId);
+	    $cond="id <='".$memberId."'";
+		$result=SelectQuery_th('id,unique_id,left,right','str_binarytree',$cond);
+		$result=array_reverse($result);
+	
+		$rows=array();
+		foreach($result as $key=>$value){
+			$data['id']=$value->id;
+			$data['unique_id']=strtolower($value->unique_id);
+			$data['left']=strtolower($value->left);
+			$data['right']=strtolower($value->right); 
+			$rows[]=$data;
+		}
+		$tree = $this->createTreeUser($rows,$parentId); 
+		
+		$florr=$this->arrayDecode($tree);
+
+		return $florr;
+	}
+	
+
+	function createTreeUser(array $elements, $parentId)
+	{		 
+		$branch=array();		
+		foreach($elements as $element)
+		{
+			if (($element['right'] == $parentId) && (strlen($element['right']) == strlen($parentId)))
+			{ 			   
+			    $element['side']='right';
+			    
+			    if($element['id']=='1')
+			    {
+			        break;
+			    }
+			    
+				$children = $this->createTreeUser($elements, $element['unique_id']);						 
+				if ($children)
+				{ 
+					$element[] = $children;
+				} 	
+					
+				 $branch[] = $element;	 			
+			}
+			
+			if(($element['left'] == $parentId) && (strlen($element['left']) == strlen($parentId)))
+			{ 			   
+			    $element['side']='left';
+			    if($element['id']=='1')
+			    {
+			        break;
+			    }
+				$children = $this->createTreeUser($elements, $element['unique_id']);						 
+				if ($children) { 
+					$element[] = $children;
+				} 	
+					
+				 $branch[] = $element;	 			
+			}  		
+		}
+		
+		return $branch;	 
+	}
+
+	function arrayDecode($tree)
+	{
+		$finarray = array_flatten($tree);		 
+		$farray=array();
+		if(!empty($finarray))
+		{
+			$i=0;$main=0;
+			foreach($finarray as $fg){
+				if($i%5==0){
+					$main=$main+1;
+				}
+				$farray[$main][]=$fg;
+				$i++;			   
+			}
+		}
+		return $farray;
+	}
+
+	function createTeamValue($memberId,$uniqueId,$amount){
+
+		$teamResult=$this->chkTeam($memberId,$uniqueId,$amount);
+ 
+		$totalResult=count($teamResult);
+	   
+		if($totalResult>0)
+		{   
+			$cond=" ( ";
+			
+			$leftteamArray=array();$rightteamArray=array();
+			
+			foreach($teamResult as $teamResultValue)
+			{
+				if($teamResultValue[4]=='left')
+				{
+					$leftteamArray[]=$teamResultValue[0]; 
+				}
+				
+				if($teamResultValue[4]=='right')
+				{
+					$rightteamArray[]=$teamResultValue[0]; 
+				}
+			}
+ 
+			if(!empty($leftteamArray))
+			{ 
+				$totalLeftId=implode(',',$leftteamArray);
+				
+				$this->db->query("update str_member set leftteam_id=CONCAT(leftteam_id,',$memberId'),leftteam_value=leftteam_value+$amount where member_id IN ($totalLeftId) " );	
+
+			}
+			
+			if(!empty($rightteamArray))
+			{ 				
+				$totalRightId=implode(',',$rightteamArray);
+				
+				$this->db->query("update str_member set rightteam_id=CONCAT(rightteam_id,',$memberId'),rightteam_value=rightteam_value+$amount where member_id IN ($totalRightId) " );	 				 
+			}		 
+		}		
+	}
+
 	public function isUniqueIdExist($key)
 	{ 
 		$data=array(

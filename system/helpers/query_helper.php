@@ -60,6 +60,7 @@ function SelectQuery($field,$table,$whr_col,$whr_condiition){
 	$query = $ci->db->get();
 	return $query->result();
 }
+
 function SelectQuery_th($field,$table,$whr_condition){
 	$ci =& get_instance();
 	$ci->load->database();
@@ -72,6 +73,7 @@ function SelectQuery_th($field,$table,$whr_condition){
 	$query = $ci->db->get();
 	return $query->result();
 }
+
 function select_th($field,$table,$whr){
 	$ci =& get_instance();
 	$ci->load->database();

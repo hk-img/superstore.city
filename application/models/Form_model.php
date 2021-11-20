@@ -106,8 +106,7 @@ public function __construct() {
 	}
 	 
 	
-	public function checkBinaryIncomeForUser($uniqueId,$getTotalLeftUserPv,$getTotalRightUserPv)
-	{		 
+	public function checkBinaryIncomeForUser($uniqueId,$getTotalLeftUserPv,$getTotalRightUserPv){		 
 		  
 	 
 		$getReferreMemberId=getIdByUniqueId($uniqueId);
@@ -149,7 +148,6 @@ public function __construct() {
 		}
 		return $totalPairs;
 	}
-	
 	
 
 	public function genratedBinaryIncome($pair,$userId,$leftPv,$rightPv)
@@ -248,7 +246,20 @@ public function __construct() {
 		$netAmount=0;
 		$netAmount=$amount-($tds_amount+$admin_amount);
 		
-			
+		if($type=='dr'){
+
+			$walletArray=array(
+				'user_id'=>$userId, 
+				'particular_id'=>$particularId,
+				'type'=>$type,
+				'amount'=>$amount,
+				'tds_amount'=>'0',
+				'admin_amount'=>'0',
+				'net_amount'=>$amount,
+				'status'=>$status,
+			);
+		}else{
+
 			$walletArray=array(
 				'user_id'=>$userId, 
 				'particular_id'=>$particularId,
@@ -259,6 +270,8 @@ public function __construct() {
 				'net_amount'=>$netAmount,
 				'status'=>$status,
 			);
+		}			
+			
 		 $this->insert_data($walletArray,'str_wallet');	
 		}
 			
@@ -859,26 +872,8 @@ public function __construct() {
 	 public function getTotalbusinessVolumeById($userid,$memberDate='')
 	 {
 		 $amount='0';
-		 $result='';
-		 if($memberDate!='')
-		 {
-			 $activeDate=$this->db->where('member_id',$userid)->get('str_member')->row()->active_date;
-			 
-			 if($activeDate>=$memberDate)
-			 {
-				 
-			  $result=$this->db->select('business_amount')->where('user_id',$userid)->get('str_turnover_detail')->row()->business_amount;
-			 }
-		}
-		 else
-		 {
-			  $result=$this->db->select('business_amount')->where('user_id',$userid)->get('str_turnover_detail')->row()->business_amount;
-		 }
-		
-		if($result!='')
-		{
-			$amount=$result;
-		}
+
+		$result=$this->db->select('business_amount')->where('user_id',$userid)->get('str_turnover_detail')->row()->business_amount;
 		return $amount;
 	 }
 	 
@@ -886,20 +881,28 @@ public function __construct() {
 	 
 	function getTotalLeftBusinessVolume($uniqueId,$side)
 	{
-		$leftChild=getBothleftAndrightChild($uniqueId,$side);
+		// $leftChild=getBothleftAndrightChild($uniqueId,$side);
 		
-		 $totalLeftPv=0;
-		 if(!empty($leftChild))
-		 {
-			 foreach($leftChild as $leftChild)
-			 {
-				 $memberId='0';
-				 $memberId=getIdByUniqueId($leftChild[0]);
-				 $totalLeftPv+=$this->getTotalbusinessVolumeById($memberId);
-			 }
-		 }
-		 
-		 return $totalLeftPv;
+		//  $totalLeftPv=0;
+		//  if(!empty($leftChild))
+		//  {
+		// 	 foreach($leftChild as $leftChild)
+		// 	 {
+		// 		 $memberId='0';
+		// 		 $memberId=getIdByUniqueId($leftChild[0]);
+		// 		 $totalLeftPv+=$this->getTotalbusinessVolumeById($memberId);
+		// 	 }
+		//  }
+		
+		if($side=='left'){
+
+			$result=$this->db->select('leftteam_value')->where('unique_id',$uniqueId)->get('str_member')->row()->leftteam_value;
+		}else{
+
+			$result=$this->db->select('rightteam_value')->where('unique_id',$uniqueId)->get('str_member')->row()->rightteam_value;
+		}
+		
+		return $result;
 	}
 	
 	function getTotalRepurchaeBv($uniqueId,$side)
@@ -973,12 +976,12 @@ public function __construct() {
 	
 	public function getUserCapping($userId)
 	{
-		$amount='0';
-		$result=$this->db->select('pv_value')->where('member_id',$userId)->get('str_member')->row()->pv_value;
-		if($result!='')
-		{
-			$amount=$result;
-		}
+		$amount='4000';
+		// $result=$this->db->select('pv_value')->where('member_id',$userId)->get('str_member')->row()->pv_value;
+		// if($result!='')
+		// {
+		// 	$amount=$result;
+		// }
 		return $amount;
 	}
 	

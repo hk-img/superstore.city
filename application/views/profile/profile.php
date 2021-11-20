@@ -323,8 +323,6 @@
 			     <input type="hidden" name="balance" value="<?php echo $finalBalance; ?>" />
 				<p style="color:red">The amount should be less than your actual amount. </p>
 				<input type="number" required class="form-control" name="amount" placeholder="Please Enter Withdrwal Amount" />
-				<p style="color:red;margin-top: 8px;">OTP sent your Registered E-mail Id.Please Enter </p>
-				<input type="number" required class="form-control" name="otp" placeholder="OTP" />
 			</div>
 			<div class="modal-footer">
 			  <button type="submit" class="btn btn-secondary" >Submit</button>
@@ -335,10 +333,10 @@
 		</div>
 	</div>
 
+	
 <script>
 	function withdrawlWindow()
 	{
-		 
 		$.ajax({
 			type: "POST",
 			dataType : "json",

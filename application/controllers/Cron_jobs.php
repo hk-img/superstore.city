@@ -497,6 +497,45 @@ class Cron_jobs extends CI_Controller {
 			die;
 		}
 	}
+	
+	public function getAllMember()
+	{
+		$result=$this->db->select('member_id,name,unique_id,active_date,leftteam_value,rightteam_value')->where(array('business_volume >'=>'0','member_id >'=>'1'))->get('str_member')->result();
+		  
+		if(!empty($result))
+		{
+			foreach($result as $resultKey=>$resultValue)
+			{
+				 				
+				 /*==start binary income code==*/
+				 
+				 /*==get total left id===*/
+				 
+				 $totalLeftPv=$resultValue->leftteam_value;
+				 
+				 $totalRightPv=$resultValue->rightteam_value; 
+				
+				 /*==Set ratio and directCond====*/
+				 
+				 $totalleftDirectSponsor=$this->db->select('COUNT(member_id) as total')->where(array('referrer_id'=>$resultValue->unique_id,'business_volume >'=>'0','tree_side'=>'left'))->get('str_member')->row()->total;
+				 $totalRightDirectSponsor=$this->db->select('COUNT(member_id) as total')->where(array('referrer_id'=>$resultValue->unique_id,'business_volume >'=>'0','tree_side'=>'right'))->get('str_member')->row()->total;
+				 
+				if((($totalLeftPv>='1000' && $totalRightPv>='2000') || ($totalLeftPv>='2000' && $totalRightPv>='1000')) && $totalleftDirectSponsor>=1 && $totalRightDirectSponsor>=1)
+				{ 
+					  
+					/*==create binary income==*/
+					  
+					$this->Form_model->checkBinaryIncomeForUser($resultValue->unique_id,$totalLeftPv,$totalRightPv);
+					 
+					/*==end binary income code==*/
+				}
+				echo $resultValue->member_id."<br>";
+				echo $resultValue->unique_id."<br>";
+			}
+		}
+		
+		echo "Done";
+	}
 }
 
 ?>

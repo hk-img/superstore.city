@@ -427,106 +427,19 @@ class Profile extends CI_Controller {
 	
 	public function withdrawlWindow()
 	{	 
-		$otp=rand(1111,9999);
+
+		$chkAlreadyWithdraw=$this->db->get_where('str_wallet',array('user_id'=>$this->session->userdata('userlogin'),'date(created_date)'=>date("Y-m-d"),'particular_id'=>'12','status !='=>'FAILED'))->row_array();
 		
-		$dayName=date("D"); 
-		
-		if($dayName=='Sat')
-		{
-			$chkAlreadyWithdraw=$this->db->get_where('str_wallet',array('user_id'=>$this->session->userdata('userlogin'),'date(created_date)'=>date("Y-m-d"),'particular_id'=>'12'))->row_array();
-			
-			if(empty($chkAlreadyWithdraw))
-			{
-				$this->db->where('member_id',$this->session->userdata('userlogin'))->update('str_member',array('otp'=>$otp));
+		if(empty($chkAlreadyWithdraw)){
 				
-				$uniqueId=getUniqueIdById($this->session->userdata('userlogin')); 
-				
-				$leftChild=getBothleftAndrightChild($uniqueId,'left');
-				 
-				$rightChild=getBothleftAndrightChild($uniqueId,'right'); 
-				
-				$totalLeftChild=0;$totalRightChild=0;
-				 
-				if(!empty($leftChild))
-				{
-					foreach($leftChild as $leftChildValue)
-					{
-						
-						$packageAmount='0';
-						 
-						$packageAmount=getPackageAmtByUniqueId($leftChildValue[0]);
-						 
-						if($packageAmount>0)
-						{
-							$totalLeftChild++;
-						}
-					}
-				}
-				 
-				if(!empty($rightChild))
-				{
-					foreach($rightChild as $rightChildValue)
-					{
-						$packageAmount='0';
-						 
-						$packageAmount=getPackageAmtByUniqueId($rightChildValue[0]);
-						 
-						if($packageAmount>0)
-						{
-							$totalRightChild++;
-						}
-					}
-				}   
-				
-				if(($totalLeftChild>='1' && $totalRightChild>='2') || ($totalLeftChild>='2' && $totalRightChild>='1'))
-				{
-					/*==send mail==*/
-					
-					$regdata=$this->db->select('email,name_type,name')->where('member_id',$this->session->userdata('userlogin'))->get('str_member')->row_array();
-					
-					$message = "<html>
-						<head>
-						<title><a href='".base_url()."'  style='color:  rgb(255,110,0);text-decoration:none;'>AYRGROUP</a></title>
-						</head>
-						<body>
-						<div>
-						<p style='color:#333;font-size:14px;'>Hi ".$regdata['name_type']." ".$regdata['name']." !</p>
-						<p style='color:#333;font-size:14px;'>".$otp."  OTP use for withdrawl Amount.</p>
-						<p style='color:#333;font-size:14px;'>Please do not share anyone.</p>
-						<table>
-						<tr>
-						<td><br/>Thank you,<br/><br/><b style='color:  rgb(255,110,0);'>AYRGROUP</b></td>
-						<td></td>
-						</tr>
-						</div>
-						</table>
-						</body>
-						</html>"; 
-										
-					MailSentNow($message,'Registration',$regdata['email']);
-					
-					$json['status']='1';
-				}
-				else
-				{
-					$json['status']='0';
-			
-					$this->session->set_userdata('storefailmsg','you can not create fund withdrawl request at this time.');
-				}
-			}
-			else
-			{
-				$json['status']='0';
-			
-				$this->session->set_userdata('storefailmsg','you can create fund withdrawl request only one time in a one day.');
-			}			
-		}
-		else
-		{
+				$json['status']='1';
+		}else{
+
 			$json['status']='0';
-			
-			$this->session->set_userdata('storefailmsg','you can create fund withdrawl request only Every Saturday.');
-		}
+		
+			$this->session->set_userdata('storefailmsg','you can create fund withdrawl request only one time in a one day.');
+		}			
+
 		
 		echo json_encode($json);
 		die;
@@ -534,53 +447,40 @@ class Profile extends CI_Controller {
 	
 	public function withdrwlAmount()
 	{
-		$otp=$this->db->select('otp')->where('member_id',$this->session->userdata('userlogin'))->get('str_member')->row()->otp;
-	    
+
 		$currentBalance=$this->input->post('balance');
 	    $requestBalance=$this->input->post('amount');
-	    $Amountotp=$this->input->post('otp');
+
+		if($currentBalance>=$requestBalance){
+
+			if($requestBalance>0){
+
+				$this->Form_model->addMoneyInWallet($this->session->userdata('userlogin'),'12','dr',$requestBalance,'PENDING');
+				
+				// $walletId=$this->db->insert_id();
+				
+				// $memberDetail=$this->db->where('member_id',$this->session->userdata('userlogin'))->get('str_member')->row_array();
+				
+				// $bankDetail=array(
+				// 	'wallet_id'=>$walletId,
+				// 	'user_id'=>$this->session->userdata('userlogin'),
+				// 	'bank_name'=>$memberDetail['bank_name'],
+				// 	'account_no'=>$memberDetail['account_no'],
+				// 	'ifsc_code'=>$memberDetail['ifsc_code'],
+				// 	'branch_name'=>$memberDetail['branch'],
+				// );
+				
+				// $this->db->insert('withdrawl_bankdetail',$bankDetail); 
+				
+				$this->session->set_userdata('storesucmsg',"Your Withdrawl Request Recevied Successfully"); 
+
+			}else{
+				$this->session->set_userdata('storefailmsg',"Amount should be greater than 0");   
+			}
+		}else{
+			$this->session->set_userdata('storefailmsg', 'Insufficient Balance.');
+		}
 		
-	    if($Amountotp==$otp)
-		{
-			if($currentBalance>=$requestBalance)
-			{
-				if($requestBalance>0)
-				{
-					$this->Form_model->addMoneyInWallet($this->session->userdata('userlogin'),'12','dr',$requestBalance,'PENDING');
-					
-					$walletId=$this->db->insert_id();
-					
-					$memberDetail=$this->db->where('member_id',$this->session->userdata('userlogin'))->get('str_member')->row_array();
-					
-					$bankDetail=array(
-						'wallet_id'=>$walletId,
-						'user_id'=>$this->session->userdata('userlogin'),
-						'bank_name'=>$memberDetail['bank_name'],
-						'account_no'=>$memberDetail['account_no'],
-						'ifsc_code'=>$memberDetail['ifsc_code'],
-						'branch_name'=>$memberDetail['branch'],
-					);
-					
-					$this->db->insert('withdrawl_bankdetail',$bankDetail); 
-					
-					$this->session->set_userdata('storesucmsg',"Your Withdrawl Request Recevied Successfully");   
-				}
-				else
-				{
-				  $this->session->set_userdata('storefailmsg',"Amount should be greater than 0");   
-				}
-			}
-			else
-			{
-				$this->session->set_userdata('storefailmsg', 'Insufficient Balance.');
-			}
-			
-			$this->db->where('member_id',$this->session->userdata('userlogin'))->update('str_member',array('otp'=>'0'));
-		}
-		else
-		{
-			$this->session->set_userdata('storefailmsg', 'OTP not Match.please Try Again.');
-		}
 		
 		header("location: ".base_url('profile'));
 	}
