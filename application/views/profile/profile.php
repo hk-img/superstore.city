@@ -235,7 +235,7 @@
               <span style="float:right;cursor:pointer" onclick="withdrawlWindow()" ><i class="fa fa-inr"></i> Withdrawl</span>
 		  </div>
             <div class="list-group list-group-flush small">
-                 <p><span>(5% TDS &amp; 10% admin charge deducted)</span></p>
+                 <p><span>(5% TDS, 5% shopping wallet & 10% level upgrade deducted)</span></p>
               <p>Wallet Balance - <i class="fa fa-inr" style="font-size: 13px;"></i>
 		      <?php     
 					$totalCrBalance=$this->Form_model->totalGrossBalance($this->session->userdata('userlogin')); 

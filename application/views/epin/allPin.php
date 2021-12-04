@@ -56,10 +56,7 @@
 										echo checkPinAmount($value->pin_no); 
 									?><small>INR</small>
 								</div>
-								<div class="widget-title">
-									<?php 
-										echo $value->pin_no 
-									?>
+								<div class="widget-title"><p onclick="copy(this)"><?php echo $value->pin_no ?></p>
 								</div>
 							</div>
 							<div class="widget-subtitle" style="background:#52a452">
@@ -84,4 +81,15 @@
  
 	</div>
 </div>
+<script>
+function copy(that){
+var inp =document.createElement('input');
+document.body.appendChild(inp)
+inp.value =that.textContent
+inp.select();
+document.execCommand('copy',false);
+inp.remove();
+alert('E-pin copied');
+}
+</script>
 </div>

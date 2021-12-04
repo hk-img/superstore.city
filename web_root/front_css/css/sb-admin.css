@@ -657,7 +657,7 @@ color:#fff;
 
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a,
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a {
-  color: #eee;
+  color: #000 !important;
 }
 
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a:focus, #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a:hover,
@@ -714,7 +714,7 @@ color:#fff;
 table.dataTable tbody tr {
     background-color: transparent;
 }
-.dataTables_wrapper .dataTables_info, .dataTables_filter label, .dataTables_wrapper .dataTables_length label, .dataTables_wrapper .dataTables_paginate .paginate_button, .dataTables_wrapper .dataTables_paginate, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled{color: #eee !important;}
+.dataTables_wrapper .dataTables_info, .dataTables_filter label, .dataTables_wrapper .dataTables_length label, .dataTables_wrapper .dataTables_paginate .paginate_button, .dataTables_wrapper .dataTables_paginate, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled{color: #000 !important;}
 .dataTables_wrapper .dataTables_length label select{color: #333;}
 .dataTables_wrapper label input, .dataTables_wrapper label select{border: 1px solid #eee;}
 #example_filter input

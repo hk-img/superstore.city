@@ -242,9 +242,18 @@ public function __construct() {
 		$admin_amount=0;
 		$admin_amount=round((($amount*$AdminTax)/100),2);
 		
+		$shooping_amount = 0;
+		$shooping_amount = round((($amount*5)/100),2);
+		
+		$upgrade_amount = 0;
+		$upgrade_amount = round((($amount*10)/100),2);
+		
 		/*===calculation of Net Amount  Amount==*/ 
 		$netAmount=0;
-		$netAmount=$amount-($tds_amount+$admin_amount);
+		$netAmount=$amount-($tds_amount+$admin_amount+$shooping_amount+$upgrade_amount);
+		
+		
+		
 		
 		if($type=='dr'){
 
@@ -255,6 +264,8 @@ public function __construct() {
 				'amount'=>$amount,
 				'tds_amount'=>'0',
 				'admin_amount'=>'0',
+				'shooping_amount'=>'0',
+				'upgrade_amount'=>'0',
 				'net_amount'=>$amount,
 				'status'=>$status,
 			);
@@ -267,6 +278,8 @@ public function __construct() {
 				'amount'=>$amount,
 				'tds_amount'=>$tds_amount,
 				'admin_amount'=>$admin_amount,
+				'shooping_amount'=>$shooping_amount,
+				'upgrade_amount'=>$upgrade_amount,
 				'net_amount'=>$netAmount,
 				'status'=>$status,
 			);
