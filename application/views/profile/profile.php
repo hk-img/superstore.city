@@ -238,9 +238,9 @@
                  <p><span>(5% TDS, 5% shopping wallet & 10% level upgrade deducted)</span></p>
               <p>Wallet Balance - <i class="fa fa-inr" style="font-size: 13px;"></i>
 		      <?php     
-					$totalCrBalance=$this->Form_model->totalGrossBalance($this->session->userdata('userlogin')); 
+					$totalCrBalance=$this->Form_model->totalCrBalance($this->session->userdata('userlogin')); 
 					
-					$confirmBalanceBalance=$this->Form_model->confirmGrossBalance($this->session->userdata('userlogin'));
+					$confirmBalanceBalance=$this->Form_model->confirmBalance($this->session->userdata('userlogin'));
 					
 					$confirmPendingBalance=$this->Form_model->confirmPendingBalance($this->session->userdata('userlogin'));
 					
@@ -250,6 +250,13 @@
 			  </p>		  
 			   <p>Pending Amount - <i class="fa fa-inr" style="font-size: 13px;"></i> <?php echo number_format($confirmPendingBalance,2); ?></p>
 			  <p>Confirm Amount - <i class="fa fa-inr" style="font-size: 13px;"></i> <?php echo number_format($confirmBalanceBalance,2); ?></p>
+				<?php 
+
+					$extraAmountResult=$this->db->select('sum(shooping_amount) as shopping,sum(upgrade_amount) as upgrade,sum(tds_amount) as tdsamount')->where('user_id',$this->session->userdata('userlogin'))->get('str_wallet')->row_array();
+				?>
+			  <p>TDS Amount - <i class="fa fa-inr" style="font-size: 13px;"></i> <?php echo number_format($extraAmountResult['tdsamount'],2); ?></p>
+			  <p>Shopping Amount - <i class="fa fa-inr" style="font-size: 13px;"></i> <?php echo number_format($extraAmountResult['shopping'],2); ?></p>
+			  <p>Upgrade Amount - <i class="fa fa-inr" style="font-size: 13px;"></i> <?php echo number_format($extraAmountResult['upgrade'],2); ?></p>
 			  <!--<p style="padding-top: 10px;font-size: 14px;margin-bottom: 0;">REF. Amount - <i class="fa fa-inr" style="font-size: 13px;"></i> 
 			  <?php 
 			  
@@ -297,7 +304,7 @@
 						{
 							?>
 							<div style="border-bottom:1px dotted #FD3F2A;">
-								<p><br>Welcome in AYRGROUP.</p>
+								<p><br>Welcome in Royal Super Store.</p>
 							</div> 
 							<?php 
 						}

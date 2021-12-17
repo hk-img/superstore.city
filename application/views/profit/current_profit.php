@@ -7,11 +7,7 @@
     tr.shown td.details-control {
         background: url('./web_root/images/details_close.png') no-repeat center center;
     }
-    
-    .table-striped > tbody > tr:nth-of-type(odd)
-    {
-       background-color: #210707;
-    }
+
  </style>
  
 	  <div class="content-wrapper">

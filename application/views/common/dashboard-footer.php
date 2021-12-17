@@ -28,17 +28,17 @@
       </div>
     </div>
 	<script>
-			window.oncontextmenu = function () {
-			return false;
-			}
-			$(document).keydown(function (event) {
-			if (event.keyCode == 123) {
-			return false;
-			}
-			else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74) || (event.ctrlKey  && event.keyCode == 85) || (event.ctrlKey && event.shiftKey && event.keyCode == 67))  {
-			return false;
-			}
-			});
+			// window.oncontextmenu = function () {
+			// return false;
+			// }
+			// $(document).keydown(function (event) {
+			// if (event.keyCode == 123) {
+			// return false;
+			// }
+			// else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74) || (event.ctrlKey  && event.keyCode == 85) || (event.ctrlKey && event.shiftKey && event.keyCode == 67))  {
+			// return false;
+			// }
+			// });
 	</script>
     <!-- Bootstrap core JavaScript-->
     <script type="text/javascript" src="<?php echo $root;?>web_root/front_css/js/bootstrap.js"></script>
